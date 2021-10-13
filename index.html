@@ -9,12 +9,33 @@
     <link rel="stylesheet" href="./assets/style/style.css">
     <title>Poke Project</title>
 </head>
-<body>  
-    <h1>Pokemons Primera generacion</h1>
+<body>   
+    <h1>Pokemons</h1>
+    <div id="todos">
+        <button value="https://pokeapi.co/api/v2/pokemon/?offset=0&limit=30"id="btnVer">Ver pokemons</button>
+        <button id="ocultar"hidden>Ocultar</button>
+    </div> 
+        <p class="textBuscador">Busca tu pokemon!</p>
+    <div id="buscador">
+       
+        <input id="textoPokemon" placeholder=" Nombre de tu pokemon"type="text">
+        <button id="btnBuscar">Buscar</button>
+        <button id="ocultarBuscador"hidden>Ocultar</button>
+    </div>
+
+
     <div class="container">
-        <ul class="pokemon">
-            
+        <ul class="pokemon" hidden>
+
         </ul>
+        
+        <ul class="pokemons">
+        </ul>
+        
+    </div>
+    <div class="pagination">
+        <button type="button" value="" id="atras" hidden>Atras</button >
+        <button type="button" value="" id="siguiente" hidden>Siguiente</button >
     </div>
     
 </body>

@@ -1,29 +1,174 @@
 body {
-  background-color: white;
+  background-color: #87CEFA;
 }
 
 h1 {
   text-align: center;
+  font-size: 70px;
+}
+
+.textBuscador {
+  text-align: center;
+  font-size: 25px;
+}
+
+#todos {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+#todos #btnVer {
+  margin-right: 15px;
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-size: 20px;
+  border-radius: 7px;
+}
+#todos #ocultar {
+  margin-right: 15px;
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-size: 20px;
+  border-radius: 7px;
+}
+
+#buscador {
+  display: flex;
+  justify-content: center;
+}
+#buscador #textoPokemon {
+  border-style: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 15px;
+}
+#buscador #btnBuscar {
+  margin-right: 15px;
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-size: 20px;
+  border-radius: 7px;
+}
+#buscador #btnBuscar:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#buscador #ocultarBuscador {
+  margin-right: 15px;
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-size: 20px;
+  border-radius: 7px;
+}
+
+.pokeball {
+  align-self: center;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(to bottom, #fe0001 50%, white 50%);
+  border-radius: 50%;
+  border: 8px solid black;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+.pokeball::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 100px;
+  background: black;
+  top: 50px;
+  transform: translatey(-50%);
+}
+.pokeball::after {
+  content: "";
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background: white;
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .pokemon {
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.pokemons, .pokemon {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
 }
-.pokemon li {
+.pokemons li, .pokemon li {
+  background-color: mintcream;
   margin: 3px;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 30px;
   border: 2px solid black;
 }
-.pokemon li h3 {
+.pokemons li h3, .pokemon li h3 {
   text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
 }
-.pokemon li img {
+.pokemons li img, .pokemon li img {
   width: 200px;
 }
-.pokemon li:hover {
+.pokemons li p, .pokemon li p {
+  font-size: 20px;
+  font-style: italic;
+}
+.pokemons li:hover, .pokemon li:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background-color: red;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination #atras {
+  margin-right: 15px;
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-size: 20px;
+  border-radius: 7px;
+}
+.pagination #siguiente {
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-size: 20px;
+  border-radius: 7px;
 }/*# sourceMappingURL=style.css.map */
